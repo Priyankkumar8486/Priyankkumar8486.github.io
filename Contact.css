@@ -1,0 +1,277 @@
+/******************************************
+Website name : Final Project
+Website owner: Priyankkumar Suhagiya
+******************************************/
+
+
+
+/******************************************
+Color guide 
+****************
+Main Background color: rgb(240, 255, 255)
+Header Background Color: rgb(127, 255, 212)
+Anchor: rgb(245, 245, 245)
+Anchor Background: rgb(0, 0, 0) 
+Anchor Hover: rgb(0, 0, 255)
+Anchor Hover Background Color: rgb(240, 248, 255)
+Heading Shadow: rgb(128, 128, 128)
+Footer: rgb(0, 0, 0)
+Footer Background: rgb(127, 255, 212)
+******************************************/
+
+
+
+/******************************************
+Typography Guide
+****************
+Footer: Pattaya
+******************************************/
+
+
+
+/******************************************
+Table of contents
+****************
+1.Font Family
+2.Body
+3.Header
+4.Heading
+5.Main
+6.Article
+7.Image
+8.Section
+9.Form
+10.Footer
+********************************************/
+
+
+
+/****************************************
+  Image website : https://www.flaticon.com/
+  ******************************************/
+
+
+/******************************Font Family******************************/
+@font-face {
+    font-family: "Pattaya";
+    src: url("Pattaya.ttf");
+}
+
+
+/******************************Body******************************/
+header, main, footer{
+    margin: 0;
+    padding: 0;
+}
+
+
+/******************************Header******************************/
+header{
+    background-color: rgb(127, 255, 212);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header nav.desktop ul{
+    display: flex;
+    justify-content: space-around;
+}
+header nav.desktop ul li{
+    font-size: 22px;
+    margin: 15px;
+}
+header .mobile{
+    display: none;
+}
+header nav ul li a{
+    display: block;
+    padding: 15px;
+    color: rgb(245, 245, 245);
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 10px;
+}
+header nav ul li a:hover{
+    color: rgb(0, 0, 255);
+    transition: 0.5s;
+    background-color: rgb(240, 248, 255);
+}
+
+
+/******************************Heading******************************/
+h3{
+    font-size: 35px;
+    text-align: center;
+    padding: 30px;
+    text-shadow: 2px 2px 5px rgb(128, 128, 128);
+}
+
+
+/******************************Main******************************/
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(240, 255, 255);
+    padding: 140px 0;
+}
+
+
+/******************************Article******************************/
+main article{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+
+/******************************Image******************************/
+header img{
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    transition: 0.8s;
+}
+header img:hover{
+    transform: scale(0.8) translate(1px);
+}
+main article img{
+    width: 25px;
+    height: 25px;
+    margin: 0 15px;
+}
+
+
+/******************************Section******************************/
+main section{
+    margin: 20px 40px;
+    border: 3px dotted rgb(0, 0, 0);
+    padding: 20px;
+    height: 250px;
+    width: 500px;
+}
+
+
+/******************************Form******************************/
+form *{
+    margin: 4px;
+}
+fieldset{
+    border: 1px solid rgb(0, 0, 139);
+    text-align:left;
+    margin: 1% auto;
+    padding: 1.5%;
+}
+form legend{
+    font-size: 20px;
+}
+
+
+/******************************Footer******************************/
+footer{
+    text-align: center;
+    font-size: 20px;
+    padding: 18px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(127, 255, 212);
+    font-family: Pattaya, Arial, sans-serif;
+}
+
+
+/******************************Media Query******************************/
+@media screen and (max-width: 570px) {
+    header img{
+        width: 45px;
+        height: 45px;
+        margin-left: 0;
+
+    }
+    header nav.desktop{
+        display: none;
+    }
+    header nav.mobile{
+        display: block;
+    }
+    header nav.mobile ul li ul li{
+        margin: 10px 5px;
+    }
+    header nav.mobile ul li ul li a{
+        padding: 14px 12px;
+        text-align: center;
+    }
+    header nav.mobile ul li ul{
+        display: none;
+        position: absolute;
+        right: 0;
+        width: 25%;
+    }
+    header nav.mobile ul li:hover > ul{
+        display: block;
+    }
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main section{
+        width: auto;
+    }
+    footer{
+        padding: 18px 0;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 570px) {
+    header img{
+        margin-top: 10px;
+        margin-left: 5px;
+        width: 55px;
+        height: 55px;
+    }
+    header nav.desktop ul li{
+        font-size: 15px;
+    }
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main section{
+        width: auto;
+    }
+    footer{
+        font-size: 20px;
+        padding: 18px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    header img{
+        margin-top: 5px;
+        margin-left: 5px;
+        width: 65px;
+        height: 65px;
+    }
+    header nav.desktop ul li{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header img{
+        width: 80px;
+        height: 80px;
+        margin-top: 2px;
+        margin-left: 15px;
+    }
+    header nav.desktop ul li{
+        font-size: 22px;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+    main section{
+        width: 500px;
+    }
+}
